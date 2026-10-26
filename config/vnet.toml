@@ -1,0 +1,34 @@
+[system]
+name = "VNet"
+version = "0.1.0"
+language_standard = "C++23"
+
+[architecture]
+native_bits = 64
+virtual_bits = 1024
+virtual_bytes = 128
+
+[number_system]
+default_base = 10
+binary = true
+octal = true
+decimal = true
+hexadecimal = true
+base64 = true
+
+[database]
+engine = "mysql"
+host = "127.0.0.1"
+port = 3306
+database = "vnet"
+
+[neural]
+enabled = true
+training = true
+inference = true
+
+[ui]
+left_navigation = true
+top_bar = true
+bottom_bar = true
+right_widgets = true
