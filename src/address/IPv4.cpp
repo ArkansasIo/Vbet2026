@@ -20,6 +20,11 @@ IPv4 IPv4::parse(std::string_view text) {
     return IPv4(static_cast<std::uint8_t>(a), static_cast<std::uint8_t>(b), static_cast<std::uint8_t>(c), static_cast<std::uint8_t>(d));
 }
 
+std::string IPv4::toPaddedDecimal9() const {
+    return std::format("{:09}.{:09}.{:09}.{:09}",
+        octets_[0].value, octets_[1].value, octets_[2].value, octets_[3].value);
+}
+
 std::string IPv4::toString() const {
     return std::format("{}.{}.{}.{}", octets_[0].value, octets_[1].value, octets_[2].value, octets_[3].value);
 }
